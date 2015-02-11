@@ -17,4 +17,3 @@ Common methods
 * `void map(llist *l, nodefunc f)`
 * `void* llist_iter(llist *l, nodeiter f)`
 * `void* llist_test(llist *l, void *q, nodetest t)`
-* `void* llist_find(llist *l, void *data, nodetest equals)`
