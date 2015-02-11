@@ -2,7 +2,6 @@
 
 #include <stdlib.h>
 #include <stdint.h>
-#include <stdio.h>
 #include "llist.h"
 
 void llist_init(llist *l) {
@@ -45,10 +44,6 @@ void map(llist *l, nodefunc f) {
     return TRUE;
   }
   llist_iter(l, iter_true);
-}
-
-void *llist_find(llist *l, void *data, nodetest equals) {
-  return llist_test(l, data, equals);
 }
 
 void llist_append(llist *l, node *n) {

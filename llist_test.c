@@ -14,6 +14,10 @@ bool test_equals(void *a, void *b) {
 
 void node_free(node *n) { free(n); }
 
+void *llist_find(llist *l, void *data) {
+  return llist_test(l, data, test_equals);
+}
+
 void llist_print(llist *l);
 bool find_and_remove(llist *l, int value);
 node *alloc_node(int *data);
@@ -63,7 +67,7 @@ void llist_print(llist *l) {
 }
 
 bool find_and_remove(llist *l, int value) {
-  node *n = llist_find(l, &value, test_equals);
+  node *n = llist_find(l, &value);
   if (n) {
     llist_remove(l, n);
     node_free(n);
