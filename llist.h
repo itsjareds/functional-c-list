@@ -1,3 +1,5 @@
+/* Author: Jared Klingenberger <klinge2@clemson.edu> */
+
 #ifndef LLIST_H
 #define LLIST_H
 

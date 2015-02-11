@@ -1,3 +1,5 @@
+/* Author: Jared Klingenberger <klinge2@clemson.edu> */
+
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
