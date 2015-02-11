@@ -4,8 +4,6 @@
 #define LLIST_H
 
 
-#include <stdint.h>
-
 /* Fields */
 typedef struct _node {
   struct _node *next, *prev;

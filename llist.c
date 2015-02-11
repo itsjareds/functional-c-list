@@ -1,7 +1,6 @@
 /* Author: Jared Klingenberger <klinge2@clemson.edu> */
 
 #include <stdlib.h>
-#include <stdint.h>
 #include "llist.h"
 
 void llist_init(llist *l) {
@@ -18,16 +17,16 @@ void llist_node_init(node *n) {
 
 void *llist_iter(llist *l, nodeiter f) {
   node *n = l->head, *next = NULL;
-  intptr_t result = 0;
+  void *result = 0;
 
   while (n != NULL && result == 0) {
     next = n->next;
     if (!f(n))
-      result = (intptr_t)n;
+      result = (void*)n;
     n = next;
   }
 
-  return (void*)result;
+  return result;
 }
 
 void *llist_test(llist *l, void *q, nodetest t) {
