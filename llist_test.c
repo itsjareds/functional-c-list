@@ -14,7 +14,7 @@
 
     void node_free(node *n) { free(n); }
 
-    void *llist_find(llist *l, void *data) {
+    node* llist_find(llist *l, void *data) {
       return llist_test(l, data, test_equals);
     }
 
